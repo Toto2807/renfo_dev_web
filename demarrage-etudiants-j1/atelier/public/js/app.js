@@ -12,12 +12,13 @@ formulaire?.addEventListener('submit', (event) => {
   }
 });
 
+
 // Version du serveur local, échec discret si indisponible.
-fetch('/version.json', { headers: { accept: 'application/json' } })
-  .then((reponse) => (reponse.ok ? reponse.json() : null))
-  .then((donnees) => {
-    if (donnees && typeof donnees.version === 'string' && versionElt) {
-      versionElt.textContent = `version ${donnees.version}`;
-    }
-  })
-  .catch(() => {});
+// fetch('/version.json', { headers: { accept: 'application/json' } })
+//   .then((reponse) => (reponse.ok ? reponse.json() : null))
+//   .then((donnees) => {
+//     if (donnees && typeof donnees.version === 'string' && versionElt) {
+//       versionElt.textContent = `version ${donnees.version}`;
+//     }
+//   })
+//   .catch(() => {});

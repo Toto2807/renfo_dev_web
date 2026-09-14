@@ -2,13 +2,28 @@
 
 **Noté. Un fichier par étudiant, écrit avec vos mots.** Une phrase honnête (« j'ai essayé X, j'ai vu Y, je ne comprends pas pourquoi ») rapporte plus qu'une phrase parfaite recopiée.
 
-- Nom :
-- Binôme :
-- Atelier utilisé (le mien, celui du binôme, la reprise) :
+- Nom : CULLIER Théo
+- Binôme : BAROUKH Noam
+- Atelier utilisé (le mien, celui du binôme, la reprise) : Le mien
 
 ## Pour chaque TP abordé
 
 Recopiez ce bloc autant de fois que nécessaire.
+
+### TP 6
+
+- J'ai prédit :
+    Rien n'était à prévoir
+- Nous avons fait :
+    Rien n'était à faire étant donné que tout fonctionnait des précedentes étapes
+- J'ai observé :
+    Une interface qui fonctionne avec un status qui change après l'envoie
+- J'ai compris :
+    Rien de nouveau 
+- Je n'ai pas compris :
+    Rien
+- Réponse à la question « Dans le suivi » du TP :
+    La ligne empéchant le rechargement est le "event.preventDefault()"
 
 ### TP…
 
