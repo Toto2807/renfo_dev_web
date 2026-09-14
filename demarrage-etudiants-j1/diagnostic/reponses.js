@@ -6,6 +6,9 @@ export function estValide(texte) {
   // TODO : retourner true si texte est une chaîne dont la longueur
   // après trim() est entre 3 et 40 inclus, false sinon.
   // Exemples : "Léa" -> true, "  AB  " -> false, "" -> false.
+  if(texte.trim().length >= 3 && text.trim().length <= 40){
+    return true;
+  }
   return false;
 }
 
@@ -14,5 +17,10 @@ export function extraireActifs(elements) {
   // éléments où active === true et name est une chaîne non vide après trim().
   // Ne pas modifier le tableau d'origine.
   // Exemple : [{name:"Aïcha",active:true},{name:"",active:true},{name:"Bob",active:false}] -> ["Aïcha"].
+  if(Array.isArray(elements)){
+    if(elements.length > 0){
+      return elements.filter(elements => elements.active === true && typeof elements.name === "string" && elements.name.trim().length > 0).map(elements => elements.name.trim())
+    }
+  }
   return [];
 }
