@@ -42,6 +42,23 @@ Recopiez ce bloc autant de fois que nécessaire.
     Le 'innerHTML' fait en sorte de prendre la chaine de caractère et de l'inclure certe mais si une fonction ou un variable HTML est tapée dedans alors celle-ci va s'exécuter étant donnée que 'innerHTML' interprete le HTML
     Tandis qu'avec le 'textContent' lui fait en sorte de considéré les chaine de caractères tapées comme du texte évitant ainsi les attaque du type XSS.
 
+### TP 8
+
+- J'ai prédit :
+    Une réponse suivant des messages prédéfinis et des messages d'erreurs se gérant grâce à des fonctions exportées.
+- Nous avons fait :
+    Deux fonctions dans un fichiers "brain.js" une pour la validation de la chaine de caractère et l'autre pour la réponse.
+- J'ai observé :
+    Des réponses valide et des messages d'erreurs en rapport avec l'erreur observée.
+- J'ai compris :
+    Rien de nouveau par rapport à ce que l'on savait déjà.
+- Je n'ai pas compris :
+    Rien n'a pas été compris.
+- Réponse à la question « Dans le suivi » du TP :
+    Le fichier "brain.js" contient la logique de l'application et doit rester indépendante de l'interface comprise dans le "app.js".
+    Notamment pour le fait de le réutiliser et de faire en sorte de sécuriser des données sensibles qui pourraient s'y retrouver.
+    D'où le fait d'utiliser une liste blanche pour "filtrer" les fichiers accessibles. 
+
 ## Épreuve de l'explication (TP12)
 
 - Ce que je n'ai pas su expliquer :

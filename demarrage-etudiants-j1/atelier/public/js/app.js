@@ -1,3 +1,5 @@
+import { validateMessage,replyTo } from './brain.js';
+
 const formulaire = document.querySelector('#chat-form');
 const statut = document.querySelector('#status');
 const versionElt = document.querySelector('#version');
@@ -12,20 +14,26 @@ const compteur = document.querySelector('#compteur');
 formulaire?.addEventListener(`submit`, (event) => {
   event.preventDefault();
   const message_envoye = message.value.trim()
-  if(message_envoye.length <= 0){
-    statut.textContent = 'Le message ne doit pas être vide.' 
-  }else{
-    const li = document.createElement('li')
-    li.textContent = `Vous : ${message_envoye}`
-    messages.append(li)
-    message.value = ''
-    statut.textContent = ''
-    compteur.textContent = '0 / 280'
-    message.focus()
+  if(validateMessage(message_envoye).ok === false){
+    statut.textContent = validateMessage(message_envoye).error
   }
-  // if (statut) {
-  //   statut.textContent = 'Interface prête ; les réponses arrivent au J2.';
+  // if(message_envoye.length <= 0){
+  //   statut.textContent = 'Le message ne doit pas être vide.' 
   // }
+    else{
+      //Création du message et de la réponse
+      const li = document.createElement('li')
+      li.textContent = `Vous : ${message_envoye}`
+      messages.append(li)
+      const li2 = document.createElement('li')
+      li2.textContent = `Cap Web : ${replyTo(message_envoye)}`
+      messages.append(li2)
+      // Remise à zéro du formulaire
+      message.value = ''
+      statut.textContent = ''
+      compteur.textContent = '0 / 280'
+      message.focus()
+  }
 });
 
 message.addEventListener('input',() =>{
