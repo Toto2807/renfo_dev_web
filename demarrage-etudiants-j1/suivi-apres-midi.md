@@ -31,6 +31,7 @@ Recopiez ce bloc autant de fois que nécessaire.
     Un affichage des valeurs tapé dans la liste (actuellement vide) et un compteur qui s'incrémente en fonction du nombre de caractère
 - Nous avons fait :
     Une fonction pour l'affichage des messages et la remise à zéro de l'espace de message et une autre pour le compteur.
+    De plus si un message avec espace est envoyé un message de status s'active sans mettre les espaces dans la discussion.
 - J'ai observé :
     Des messages qui apparaissent dans la liste et un compteur qui augmente.
 - J'ai compris :
