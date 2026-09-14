@@ -15,7 +15,7 @@ Recopiez ce bloc autant de fois que nécessaire.
 - J'ai prédit :
     Rien n'était à prévoir
 - Nous avons fait :
-    Rien n'était à faire étant donné que tout fonctionnait des précedentes étapes
+    Ajout des fichiers de l'après midi dans le github
 - J'ai observé :
     Une interface qui fonctionne avec un status qui change après l'envoie
 - J'ai compris :
@@ -25,14 +25,21 @@ Recopiez ce bloc autant de fois que nécessaire.
 - Réponse à la question « Dans le suivi » du TP :
     La ligne empéchant le rechargement est le "event.preventDefault()"
 
-### TP…
+### TP 7
 
 - J'ai prédit :
+    Un affichage des valeurs tapé dans la liste (actuellement vide) et un compteur qui s'incrémente en fonction du nombre de caractère
 - Nous avons fait :
+    Une fonction pour l'affichage des messages et la remise à zéro de l'espace de message et une autre pour le compteur.
 - J'ai observé :
+    Des messages qui apparaissent dans la liste et un compteur qui augmente.
 - J'ai compris :
+    La différence entre 'innerHTML' et 'textContent'.
 - Je n'ai pas compris :
+    Rien
 - Réponse à la question « Dans le suivi » du TP :
+    Le 'innerHTML' fait en sorte de prendre la chaine de caractère et de l'inclure certe mais si une fonction ou un variable HTML est tapée dedans alors celle-ci va s'exécuter étant donnée que 'innerHTML' interprete le HTML
+    Tandis qu'avec le 'textContent' lui fait en sorte de considéré les chaine de caractères tapées comme du texte évitant ainsi les attaque du type XSS.
 
 ## Épreuve de l'explication (TP12)
 
