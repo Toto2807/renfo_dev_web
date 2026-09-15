@@ -119,20 +119,31 @@ Recopiez ce bloc autant de fois que nécessaire.
     "Pour l'instant jJe pneux comprepondre à ces messpages : bvonjour, salut, aidre, tmest en minuscule ou majusculge"'
 
     Cela m'a permis de comprendre que mon test pour vérifier si une chaine connu (aide) renvoyait le message d'une chaine inconnu passait ou était stoppé.
-    l a donc été stoppé car mon la valeur dans mon "equal" ne correspondait pas à la valeur qeu devait renvoyer ma chaine (aide)
+    Il a donc été stoppé car mon la valeur dans mon "equal" ne correspondait pas à la valeur qeu devait renvoyer ma chaine (aide)
 
 ## Épreuve de l'explication (TP12)
 
 - Ce que je n'ai pas su expliquer :
+    Un petit peu de mal sur les notions nouvelles telle que "equal" ou "deepequal" ainsi que sur le "dataset"
 - Ce que mon binôme n'a pas su expliquer :
+    De son côté un peu de mal sur l'utilisation de "localStorage" et de son execution.
 
 ## Trois questions
 
 1. Pourquoi `textContent` et pas `innerHTML` ?
+    "textContent" considère les chaine de caractères tapées comme de texte à part entière donc aucune commande js ne peux être tapée dans des espaces libres d'écriture a l'instar du "innerHTML" qui lui prend la chaine de caractère telle quelle et interprete le HTML exécutant ainsi le code si elle en contenait.
 2. Pourquoi trois fichiers plutôt qu'un seul ?
+    Trois fichiers sont mieux qu'un seul pour éviter d'avoir un fichier trop charger avec plusieurs fonctions différentes à l'interieur.
+    En effet, avoir un fichier par fonction (la logique -> brain.js, l'affichage en transformaant les données en HTML -> view.js et le lien entre tout -> app.js) est plus interessant et plus simple à modifier ou plus simple pour de futur ajout.
+    Permettant ainsi d'éviter d'avoir une application monolithique.
 3. Si demain une IA écrit une partie du code, comment saurai-je qu'il est correct ?
+    Simplement en créant un fichier de test verifiant les différentes sorties prévues.
 
 ## Aides utilisées
 
-- Indices, aide-mémoire, voisins :
+- Indices, aide-mémoire, voisins : 
+    Mon binôme m'a aidé notament pour des notions que je ne connaissaient pas trop ou que je ne maitrisais pas.
+    Utilisation aussi de documentations pour connaitre l'utilité de certaines variables.
 - Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse :
+    Je n'ai pas demandé à l'IA de me créer du code mais plus de m'expliquer des notions si je ne comprenais pas celles de la doc.
+    De plus je lui ai aussi demandé si ce que j'avais créer correspondait à la demande du tp en cours sans pour autant me donner un code tout prêt au cas où il manquait une partie.
