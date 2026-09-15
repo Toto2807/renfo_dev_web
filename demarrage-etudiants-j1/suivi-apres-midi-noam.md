@@ -91,7 +91,31 @@ Recopiez ce bloc autant de fois que nécessaire.
 - Réponse à la question « Dans le suivi » du TP :
   Après vérification, la conversation apparaît uniquement à l’adresse `http://127.0.0.1:3000/`. Le `localStorage` stocke les données selon l’origine utilisée pour lancer l’application. Ainsi, si elle est ouverte via `http://localhost:3000`, une autre conversation sera enregistrée pour cette adresse. Pour la navigation privée elle utilise un stockage différent.
 
+### TP 11
 
+- J'ai prédit :
+  Un affichage des tests vert avec un seul rouge qui est créer exprès.
+- Nous avons fait :
+  Des tests dans `brain.test.js` permettent de vérifier différentes variables, notamment la longueur de la chaîne de caractères et sa présence.
+- J'ai observé :
+  Des tests qui fonctionnent tous avec comme prevu un seul est en rouge.
+- J'ai compris :
+  L'utilisation de "assert" avec "equal", "notequal" et "deepequal" pour faire les tests en fonction de ce qui était demandé.
+- Je n'ai pas compris :
+  RAS
+- Réponse à la question « Dans le suivi » du TP :
+  Voici le message en rouge :
+
+  ✖ failing tests:
+
+  test at tests/brain.test.js:27:5
+  ✖ ne repond pas a une phrase inconnue 2 (2.017709ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  actual expected
+
+  "Pour l'instant jJe pneux comprepondre à ces messpages : bvonjour, salut, aidre, tmest en minuscule ou majusculge"'
+
+  Cela m’a permis de vérifier que le test d’une chaîne connue, comme « aide », ne renvoyait pas le message prévu pour une chaîne inconnue. Le test a donc été bloqué, car la valeur indiquée dans `equal` ne correspondait pas à celle attendue pour la chaîne « aide ».
 
 ## Épreuve de l'explication (TP12)
 
@@ -101,8 +125,11 @@ Recopiez ce bloc autant de fois que nécessaire.
 ## Trois questions
 
 1. Pourquoi `textContent` et pas `innerHTML` ?
+   Parce que `textContent` affiche uniquement du texte, contrairement à `innerHTML` qui peut interpréter du code HTML. Cela évite les injections XSS.
 2. Pourquoi trois fichiers plutôt qu'un seul ?
+    Pour séparer la logique de l’application, l’interface et la gestion des vues. Cela facilite la maintenance et la réutilisation du code. Mais aussi pour éviter d’avoir un code monolithique.
 3. Si demain une IA écrit une partie du code, comment saurai-je qu'il est correct ?
+   En vérifiant son fonctionnement avec des tests et en comparant les résultats obtenus avec ceux attendus.
 
 ## Aides utilisées
 
