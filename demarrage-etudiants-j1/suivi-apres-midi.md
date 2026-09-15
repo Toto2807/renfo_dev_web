@@ -47,7 +47,7 @@ Recopiez ce bloc autant de fois que nécessaire.
 - J'ai prédit :
     Une réponse suivant des messages prédéfinis et des messages d'erreurs se gérant grâce à des fonctions exportées.
 - Nous avons fait :
-    Deux fonctions dans un fichiers "brain.js" une pour la validation de la chaine de caractère et l'autre pour la réponse.
+    Deux fonctions dans un fichier "brain.js" une pour la validation de la chaine de caractère et l'autre pour la réponse.
 - J'ai observé :
     Des réponses valide et des messages d'erreurs en rapport avec l'erreur observée.
 - J'ai compris :
@@ -77,6 +77,22 @@ Recopiez ce bloc autant de fois que nécessaire.
     "view.js" : tranforme l'historique en élément HTML et gère leur affichage
     "index.html" : permet de savoir ce qui va s'afficher sur la page et d'importer le style et le js
     "style.css" : permet d'appliquer le style sur toute la page
+
+### TP 10
+
+- J'ai prédit :
+    Un affichage de la conversation qui reste dans l'historique même après un rechargement de la page sur "http://127.0.0.1:3000/"
+- Nous avons fait :
+    Une fonction dans "app.js" pour faire en sorte d'ajouter un événement au bouton "effacer" puis une autre pour la gestion de la sauvegarde de l'historique et la gestion d'une erreur au cas ou celui-ci contienne des données non valide.
+- J'ai observé :
+    Un affichage qui reste même après un reload et une suppression qui fonctionne.
+- J'ai compris :
+    L'utilisation de "localStarage" que ce soit pour mettre des item aves "setItem" ou même poour les récupérer avec "getItem"
+- Je n'ai pas compris :
+    Rien n'a pas été compris.
+- Réponse à la question « Dans le suivi » du TP :
+    Après vérification la conversation apparait uniquement sur l'adresse "http://127.0.0.1:3000/".
+    En effet le "localStorage" permet de stocker la conversation mais uniquement depuis notre point de départ (origine du lancement de notre projet) ainsi si je le lance sur l'adresse "http://localhost:3000" la conversation sera sauvegardé mais uniquement dessus de même si je lalance en navigation privé.
 
 ## Épreuve de l'explication (TP12)
 

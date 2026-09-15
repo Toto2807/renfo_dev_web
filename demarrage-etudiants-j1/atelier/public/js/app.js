@@ -16,6 +16,32 @@ const compteur = document.querySelector('#compteur');
 // Ceci est l'historique des messages utilisateur et chatbot
 const historique = []
 
+//Ceci est le bouton pour effacer la conversation
+const effacer = document.querySelector('#effacer');
+
+//Ceci est l'historiqeu sauvegardé
+const historique_sauvegarde = localStorage.getItem('capweb.historique')
+
+if(historique_sauvegarde){
+  try{
+    const donne = JSON.parse(historique_sauvegarde)
+    historique.push(...donne)
+    renderMessages(historique, messages)
+  }catch(erreur){
+    historique.length = 0
+    statut.textContent = "La conversation sauvegardée est invalide. Une nouvelle conversation a été créée."
+  }
+}
+
+effacer?.addEventListener('click', () => {
+  if(confirm("Voulez-vous vraiment effacer la conversation ?")){
+    historique.length = 0
+    localStorage.removeItem('capweb.historique')
+    renderMessages(historique, messages)
+    statut.textContent = "La conversation a été effacée."
+  }
+})
+
 // J1 : interface seule, on bloque l’envoi et on l’explique.
 formulaire?.addEventListener(`submit`, (event) => {
   event.preventDefault();
@@ -29,6 +55,7 @@ formulaire?.addEventListener(`submit`, (event) => {
       const reponse = replyTo(message_envoye)
       historique.push({ role: 'user', content: message_envoye })
       historique.push({ role: 'assistant', content: reponse })
+      localStorage.setItem('capweb.historique',JSON.stringify(historique))
       renderMessages(historique, messages)
       // Remise à zéro du formulaire
       message.value = ''
