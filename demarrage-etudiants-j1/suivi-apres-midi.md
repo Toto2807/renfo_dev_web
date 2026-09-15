@@ -94,6 +94,33 @@ Recopiez ce bloc autant de fois que nécessaire.
     Après vérification la conversation apparait uniquement sur l'adresse "http://127.0.0.1:3000/".
     En effet le "localStorage" permet de stocker la conversation mais uniquement depuis notre point de départ (origine du lancement de notre projet) ainsi si je le lance sur l'adresse "http://localhost:3000" la conversation sera sauvegardé mais uniquement dessus de même si je lalance en navigation privé.
 
+### TP 11
+
+- J'ai prédit :
+    Un affichage des tests vert avec un seul rouge qui est créer exprès.
+- Nous avons fait :
+    Une création de test dans "brain.test.js" permettant ainsi de vérifier divers variable comme la longueur de la chaine de caractère ou encore la présence de celle-ci ...
+- J'ai observé :
+    Des tests qui fonctionnent tous avec comme prevu un seul renvoyé en rouge.
+- J'ai compris :
+    L'utilisation de "assert" avec "equal", "notequal" et "deepequal" pour faire les test suivant ce qui avait besoin d'être testé.
+- Je n'ai pas compris :
+    Rien n'a pas été compris.
+- Réponse à la question « Dans le suivi » du TP :
+    Voici le message en rouge :
+
+    ✖ failing tests:
+
+    test at tests/brain.test.js:27:5
+    ✖ ne repond pas a une phrase inconnue 2 (2.017709ms)
+    AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+    actual expected
+    
+    "Pour l'instant jJe pneux comprepondre à ces messpages : bvonjour, salut, aidre, tmest en minuscule ou majusculge"'
+
+    Cela m'a permis de comprendre que mon test pour vérifier si une chaine connu (aide) renvoyait le message d'une chaine inconnu passait ou était stoppé.
+    l a donc été stoppé car mon la valeur dans mon "equal" ne correspondait pas à la valeur qeu devait renvoyer ma chaine (aide)
+
 ## Épreuve de l'explication (TP12)
 
 - Ce que je n'ai pas su expliquer :
