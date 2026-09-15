@@ -3,7 +3,7 @@ import { renderMessages } from './view.js';
 
 const formulaire = document.querySelector('#chat-form');
 const statut = document.querySelector('#status');
-const versionElt = document.querySelector('#version');
+// const versionElt = document.querySelector('#version');
 
 // Ceci correspond au label
 const message = document.querySelector('#message');
