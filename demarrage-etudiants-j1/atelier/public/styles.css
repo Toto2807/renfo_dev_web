@@ -38,6 +38,8 @@ h2 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 #messages li {
@@ -46,6 +48,15 @@ h2 {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.5rem;
   overflow-wrap: break-word;
+  max-width: 80%;
+}
+
+#messages li[data-role="user"] {
+    align-self: flex-end;
+}
+
+#messages li[data-role="assistant"]{
+    align-self: flex-start;
 }
 
 form {

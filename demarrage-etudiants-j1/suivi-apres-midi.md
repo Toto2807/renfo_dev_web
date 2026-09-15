@@ -59,6 +59,25 @@ Recopiez ce bloc autant de fois que nécessaire.
     Notamment pour le fait de le réutiliser et de faire en sorte de sécuriser des données sensibles qui pourraient s'y retrouver.
     D'où le fait d'utiliser une liste blanche pour "filtrer" les fichiers accessibles. 
 
+### TP 9
+
+- J'ai prédit :
+    Une réponse suivant des messages prédéfinis et des messages d'erreurs se gérant grâce à des fonctions exportées comme pour le TP 8 mais cette fois ci en ayant importé notre "view.js"
+- Nous avons fait :
+    Une fonction dans "view.js" permettant de savoir le role de chaque message et d'y attribuer les réponses nécessaires en fonction.
+- J'ai observé :
+    Des réponses valide et des messages d'erreurs en rapport avec l'erreur observée toujours comme dans le TP 8 mais cette fois ci grâce à la fonction dans "view.js"
+- J'ai compris :
+    L'utilisation de "dataset"
+- Je n'ai pas compris :
+    Rien n'a pas été compris.
+- Réponse à la question « Dans le suivi » du TP :
+    "app.js" : gère les interactions avec l'utilisateur et l'historique des messages
+    "brain.js" : contient les ègles de validation des messages et les réponses de Cap web
+    "view.js" : tranforme l'historique en élément HTML et gère leur affichage
+    "index.html" : permet de savoir ce qui va s'afficher sur la page et d'importer le style et le js
+    "style.css" : permet d'appliquer le style sur toute la page
+
 ## Épreuve de l'explication (TP12)
 
 - Ce que je n'ai pas su expliquer :

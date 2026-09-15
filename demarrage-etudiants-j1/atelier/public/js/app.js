@@ -1,33 +1,35 @@
 import { validateMessage,replyTo } from './brain.js';
+import { renderMessages } from './view.js';
 
 const formulaire = document.querySelector('#chat-form');
 const statut = document.querySelector('#status');
 const versionElt = document.querySelector('#version');
+
 // Ceci correspond au label
 const message = document.querySelector('#message');
 // Ceci correspond à la liste des messages
 const messages = document.querySelector('#messages');
+
 // Ceci correspond au compteur de cractères
 const compteur = document.querySelector('#compteur');
+
+// Ceci est l'historique des messages utilisateur et chatbot
+const historique = []
 
 // J1 : interface seule, on bloque l’envoi et on l’explique.
 formulaire?.addEventListener(`submit`, (event) => {
   event.preventDefault();
-  const message_envoye = message.value.trim()
-  if(validateMessage(message_envoye).ok === false){
-    statut.textContent = validateMessage(message_envoye).error
-  }
-  // if(message_envoye.length <= 0){
-  //   statut.textContent = 'Le message ne doit pas être vide.' 
-  // }
-    else{
-      //Création du message et de la réponse
-      const li = document.createElement('li')
-      li.textContent = `Vous : ${message_envoye}`
-      messages.append(li)
-      const li2 = document.createElement('li')
-      li2.textContent = `Cap Web : ${replyTo(message_envoye)}`
-      messages.append(li2)
+  const validation = validateMessage(message.value)
+  if(validation.ok === false){
+    statut.textContent = validation.error
+    message.focus()
+    return
+  }else{
+      const message_envoye = validation.value
+      const reponse = replyTo(message_envoye)
+      historique.push({ role: 'user', content: message_envoye })
+      historique.push({ role: 'assistant', content: reponse })
+      renderMessages(historique, messages)
       // Remise à zéro du formulaire
       message.value = ''
       statut.textContent = ''
