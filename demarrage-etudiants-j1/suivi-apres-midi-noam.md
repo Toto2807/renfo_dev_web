@@ -13,15 +13,15 @@ Recopiez ce bloc autant de fois que nécessaire.
 ### TP 6
 
 - J'ai prédit :
-  N/A
+  RAS
 - Nous avons fait :
   Commit des fichiers de l'après midi dans le github
 - J'ai observé :
     Une interface qui marche avec un statut qui change après l'envoie
 - J'ai compris :
-  N/A
+  RAS
 - Je n'ai pas compris :
-  N/A
+  RAS
 - Réponse à la question « Dans le suivi » du TP :
   Ce qui pose problème pour le rechargement de la page est le "event.preventDefault()"
 
@@ -37,7 +37,7 @@ Recopiez ce bloc autant de fois que nécessaire.
 - J'ai compris :
   La différence entre textContent et innerHTML
 - Je n'ai pas compris :
-  N/A
+  RAS
 - Réponse à la question « Dans le suivi » du TP :
   innerHTML permet d’ajouter une chaîne de caractères dans du HTML mais il interprète aussi les balises HTML présentes dans cette chaîne. Si du code HTML ou JavaScript malveillant est injecté, il peut donc être exécuté, ce qui peut créer une faille XSS.
   textContent considère ce qui est ajouté comme du simple texte et n’interprète pas les balises HTML. Il est donc plus sûr de l'utilisé
@@ -45,17 +45,52 @@ Recopiez ce bloc autant de fois que nécessaire.
 ### TP 8
 
 - J'ai prédit :
-  Une réponse suivant des messages prédéfinis.
+  Une réponse suivant des messages prédéfinis ainsi que les messages d'erreur.
 - Nous avons fait :
-  Deux fonctions dans un fichier "brain.js" une pour la validation de la chaine de caractère et l'autre pour la réponse.
+  Deux fonctions dans le fichier "brain.js" pour la validation de la chaine de caractère et pour la réponse.
 - J'ai observé :
-  Des réponses valide et des messages d'erreurs en rapport avec l'erreur observée.
+  Testé differentes réponses afin de voir les differentes réponses valide et des messages d'erreurs en rapport avec l'erreur prédéfinie.
 - J'ai compris :
-  N/A
+  RAS
 - Je n'ai pas compris :
-  N/A
+  RAS
 - Réponse à la question « Dans le suivi » du TP :
-  Le fichier `brain.js` contient la logique de l’application et reste indépendant de l’interface dans `app.js`. Cela permet de le réutiliser et d’éviter d’exposer des données sensibles. Une liste vide est donc utilisée pour limiter les fichiers accessibles.
+  Le fichier `brain.js` contient la logique de l’application et reste séparé de l’interface gérée dans `app.js`. Cela facilite sa réutilisation tout en limitant l’exposition de données sensibles. Une liste vide est donc utilisée afin de restreindre l’accès aux fichiers.
+
+### TP 9
+
+- J'ai prédit :
+  Une réponse suivant des messages prédéfinis et des messages d'erreurs se gérant grâce à des fonctions exportées comme pour le TP 8 mais cette fois ci en ayant importé "view.js"
+- Nous avons fait :
+  Une fonction dans "view.js" permettant de savoir le role de chaque message et d'y attribuer les réponses nécessaires.
+- J'ai observé :
+  Des réponses valide et des messages d'erreurs en rapport avec l'erreur observée toujours comme dans le TP 8 mais cette fois ci grâce à la fonction dans "view.js"
+- J'ai compris :
+  L'utilisation de "dataset"
+- Je n'ai pas compris :
+  RAS
+- Réponse à la question « Dans le suivi » du TP :
+  "app.js" : gère les interactions avec l'user et l'historique des messages
+  "brain.js" : contient les règles de validation des messages et les réponses
+  "view.js" : tranforme l'historique en élément HTML et gère leur affichage
+  "index.html" : permet de savoir ce qui va s'afficher sur la page et d'importer le style et le js
+  "style.css" : permet d'appliquer le style sur toute la page
+
+### TP 10
+
+- J'ai prédit :
+  Un affichage de la conversation qui reste dans l'historique même après un rechargement de la page sur "http://127.0.0.1:3000/"
+- Nous avons fait :
+  Une fonction dans `app.js` permet d’ajouter un événement au bouton « Effacer » et qu’une autre gère la sauvegarde de l’historique et les erreurs liées à des données invalides.
+- J'ai observé :
+  Un affichage qui reste même après un reload et une suppression qui fonctionne.
+- J'ai compris :
+  L'utilisation de "localStarage" que ce soit pour mettre des item avec "setItem" ou même pour les récupérer avec "getItem"
+- Je n'ai pas compris :
+  RAS
+- Réponse à la question « Dans le suivi » du TP :
+  Après vérification, la conversation apparaît uniquement à l’adresse `http://127.0.0.1:3000/`. Le `localStorage` stocke les données selon l’origine utilisée pour lancer l’application. Ainsi, si elle est ouverte via `http://localhost:3000`, une autre conversation sera enregistrée pour cette adresse. Pour la navigation privée elle utilise un stockage différent.
+
 
 
 ## Épreuve de l'explication (TP12)
