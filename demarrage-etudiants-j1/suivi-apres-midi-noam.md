@@ -120,7 +120,9 @@ Recopiez ce bloc autant de fois que nécessaire.
 ## Épreuve de l'explication (TP12)
 
 - Ce que je n'ai pas su expliquer :
-- Ce que mon binôme n'a pas su expliquer :
+J'ai pas su expliquer l'utilisation de "localStorage" et de son execution
+- Ce que mon binôme n'a pas su expliquer : 
+L'utilisation de "assert" avec "equal", "notequal" et "deepequal"
 
 ## Trois questions
 
@@ -133,5 +135,5 @@ Recopiez ce bloc autant de fois que nécessaire.
 
 ## Aides utilisées
 
-- Indices, aide-mémoire, voisins :
-- Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse :
+- Indices, aide-mémoire, voisins : Mon binôme m'a aidé à comprendre l'utilisation de certaines fonction et notions que je ne connaissais pas trop ou que je ne maitrisais pas.
+- Ce que j'ai demandé à une IA, et comment j'ai vérifié sa réponse : L'ia m'a aidé à comprendre l'utilisation de "localStorage" et de son execution. J'ai vérifié sa réponse en testant le code et en observant le comportement attendu.
